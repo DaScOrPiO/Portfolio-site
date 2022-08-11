@@ -161,10 +161,11 @@ ul{
     width: 100vw;
     height: 40vh;
     display: flex;
+    justify-content: center;
 }
 
 .project-img {
-    width: 33.3%;
+    width: 30.3%;
     margin-right: 2%;
     position: relative;
     display: flex;
@@ -207,9 +208,11 @@ ul{
     width: 100vw;
     height: 50vh;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .address-info{
-    width: 50%;
+    width: 48%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -226,7 +229,7 @@ ul{
     text-decoration: underline;
 }
 .form-input{
-    width: 50%;
+    width: 48%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -237,11 +240,15 @@ ul{
 .form-input > form{
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .text-input{
-    width: 45%;
+    width: 95%;
     height: 10%;
-    margin-top: 10%;
+    margin-top: 5%;
 }
 .input{
     width: 95%;
@@ -250,7 +257,7 @@ ul{
 }
 
 .form-input > form > input[type = submit]{
-    width: 100%;
+    width: 95%;
     height: 15%;
     margin-top: 5%;
     background-color: var(--dark);
@@ -291,14 +298,14 @@ ul{
     border-radius: 50%;
 }
 
-.logo > img{
-    max-width: 100%;
-    height: 100%;
+.icon-green{
+    font-size: 2rem;
     border: 1px solid transparent;
     border-radius: 50%;
+    color: var(--dark);
 }
 
-.logo > img:hover{
+.icon-green:hover{
     opacity: 0.5;
 }
 
@@ -320,6 +327,30 @@ ul{
     transition: all 0.6s ease-in-out;
 }
 
+
+@media screen and(min-width: 1024px){
+    .header{
+        width: 100%;
+    }
+    .about, .summary, .services-container, .project, .contact-info{
+        width: 100vw;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    .project {
+        flex-direction: column;
+        height: 80vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .project-img{
+        width: 90%;
+        height: 33.3%;
+        margin-top: 2%;
+    }
+}
 
 @media only screen and (max-width: 768px) {
     .nav-menu {
@@ -369,10 +400,12 @@ ul{
         height: 100vh;
         flex-direction: column;
         font-size: 0.5rem;
+        justify-content: center;
+        align-items: center;
     }
 
     .content {
-        width: 100%;
+        width: 90%;
         height: 60%;
     }
     
@@ -393,10 +426,12 @@ ul{
     .project {
         flex-direction: column;
         height: 80vh;
+        justify-content: center;
+        align-items: center;
     }
 
     .project-img{
-        width: 100%;
+        width: 90%;
         height: 33.3%;
         margin-top: 2%;
     }
@@ -412,5 +447,9 @@ ul{
 
     .form-input{
         width: 100%;
+    }
+
+    .icon-green{
+        font-size: 1.5rem;
     }
 }
