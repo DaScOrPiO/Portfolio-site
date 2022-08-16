@@ -32,6 +32,16 @@ formbtn.addEventListener('click', validateForm);
 function backgroundSwitch() {
     darkModebtn.addEventListener('click', (() => {
         document.body.classList.toggle('dark-mode');
+        for (let i = 0; i < darkModebtn.children.length; i++) {
+            if (darkModebtn.children[i].classList.contains('bi-brightness-high')) {
+                darkModebtn.children[i].classList.remove('bi-brightness-high');
+                darkModebtn.children[i].classList.add('bi-moon-fill');
+            }
+            else if (darkModebtn.children[i].classList.contains('bi-moon-fill')) {
+                darkModebtn.children[i].classList.remove('bi-moon-fill');
+                darkModebtn.children[i].classList.add('bi-brightness-high');
+            };
+        }
     }))
 }
 backgroundSwitch()
